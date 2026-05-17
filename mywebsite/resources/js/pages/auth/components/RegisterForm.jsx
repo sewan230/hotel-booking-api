@@ -257,7 +257,7 @@ const RegisterForm = () => {
                 <button
                     type="submit"
                     disabled={!canSubmit || loading}
-                    className="w-[85%] h-10 mt-3 relative group overflow-hidden rounded-[10px] text-white px-2.5 py-1 shadow-[inset_0px_0px_5px_var(--color-text-gray)] text-[1em] font-medium bg-primary disabled:opacity-50"
+                    className="w-[85%] h-10 mt-3 relative group overflow-hidden rounded-[10px] text-white px-2.5 py-1 shadow-[inset_0px_0px_5px_var(--color-text-gray)] text-[1em] font-medium bg-primary disabled:opacity-50 cursor-pointer"
                 >
                     {loading ? "Loading..." : "Sign Up"}
                 </button>

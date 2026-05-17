@@ -67,12 +67,10 @@ const LoginForm = () => {
                     )}
                     {/* submit log in */}
                     <button type="submit" disabled={loading} className="w-[80%] h-10 relative group overflow-hidden rounded-[10px] text-white px-2.5 py-1 shadow-[inset_0px_0px_5px_var(--color-text-gray)] text-[1em] font-medium bg-primary">
-                        <div className="absolute inset-0 pointer-events-none w-full h-full 
-                        bg-linear-to-r from-transparent via-back/20 to-transparent -translate-x-full 
-                        group-hover:translate-x-full transition-transform duration-1000"></div>
+                        
                         {loading ? (
                             <div className="flex items-center justify-center gap-2">
-                                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full cursor-pointer"></div>
                                 <span>Loading...</span>
                             </div>
                         ) : "Login"}</button>
