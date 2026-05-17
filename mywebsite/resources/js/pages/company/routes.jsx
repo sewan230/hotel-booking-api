@@ -12,6 +12,7 @@ export const companyRoutes = [
       </ProtectedRoute>
     ),
     children: [
+      // index(path):(cause it is the main page called index:true)path page in the dashboard,element:page component
       { index: true , element: <Dashboard /> },
     ],
   },

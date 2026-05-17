@@ -73,6 +73,10 @@ export default function useRegisterForm() {
         setLoading(true);
 
         const role = resolveRole(cleanedData);
+        
+        //  i add it those to vliadate..(and the role is sending it self WORKING)
+        // console.log("cleanedData:", cleanedData);
+        // console.log("resolved role:", role);
 
         const response = await registerUser({
             ...cleanedData,
@@ -89,18 +93,29 @@ export default function useRegisterForm() {
 
         reset(initialForm);
 
-    } catch (err) {
+//     } catch (err) {
 
-   if (err.errors?.email) {
+//    if (err.errors?.email) {
 
-      setErrors({
-         email: err.errors.email[0]
-      });
+//       setErrors({
+//          email: err.errors.email[0]
+//       });
 
-   } else {
+//    } else {
 
-      setError("Registration failed");
-   }
+//       setError("Registration failed");
+//    }
+    }catch (err) {
+
+    console.log(err.response?.data);
+
+    if (err.response?.data?.errors) {
+        setErrors(err.response.data.errors);
+    } else {
+        setError("Registration failed");
+    }
+
+
 } finally {
         setLoading(false);
     }
