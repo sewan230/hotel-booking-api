@@ -64,13 +64,11 @@ const ForgotPassword = () => {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full h-12 rounded-xl relative group overflow-hidden bg-primary text-white font-semibold flex items-center justify-center gap-2"
+                            className="w-full h-12 rounded-xl relative group overflow-hidden bg-primary text-white font-semibold flex items-center justify-center gap-2 cursor-pointer"
                         >
-                            <div className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-back/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transhtmlForm duration-1000">
-                        </div>
                             {loading ? (
                                 <>
-                                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full"></div>
                                     Sending...
                                 </>
                             ) : (
